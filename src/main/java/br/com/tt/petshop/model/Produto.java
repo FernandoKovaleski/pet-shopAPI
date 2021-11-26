@@ -1,11 +1,10 @@
-package model;
+package br.com.tt.petshop.model;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 
-//id, nome, valor ativo
 @Entity
-@Table (name = "tb_produtos")
+@Table (name = "tb_produto")
 public class Produto {
     @Id
     @Column (name = "id")
@@ -32,6 +31,9 @@ public class Produto {
         this.ativo = ativo;
     }
 
+    public Produto(Long id, String shampo, int i, String s) {
+    }
+
     public Long getId() {
         return id;
     }
@@ -44,7 +46,7 @@ public class Produto {
         return valor;
     }
 
-    public Boolean getAtivo() {
+    public Boolean isAtivo() {
         return ativo;
     }
 }
